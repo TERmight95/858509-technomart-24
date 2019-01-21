@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Denys Mitsel](https://up.htmlacademy.ru/htmlcss/24/user/858509).
-* Наставник: [Михаил Поданев].
+* Наставник: [Михаил Поданев] (https://htmlacademy.ru/profile/mpodanev)
 
 ---
 
