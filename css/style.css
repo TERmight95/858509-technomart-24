@@ -448,7 +448,10 @@ p {
   list-style: none;
 }
 
-.modal-feedback {
+/* MODALS */
+
+.modal-feedback,
+.modal-in-basket {
   border-top: 7px solid #ff5257;
   box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, .75);
 }
@@ -483,4 +486,18 @@ p {
 
 .modal-map {
   box-shadow: 0px 0px 14.72px 1.28px rgba(47, 42, 43, 0.5);
+}
+
+.modal-in-basket p {
+  font-size: 30px;
+  line-height: 30px;
+}
+
+.button-continue {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.modal-in-basket-bottom {
+  background-color: #f1f1f1;
 }
