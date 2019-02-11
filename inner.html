@@ -4,16 +4,22 @@
 <head>
   <meta charset="utf-8" />
   <title>HTML Academy: Техномарт</title>
+  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i&amp;subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/normalize.css">
 </head>
 
 <body>
   <header class="main-header">
     <div class="main-header-top">
       <a href="#" class="main-header-logo"><img src="img/logo-header.jpg" alt="Логотип"></a>
-      <input type="text" placeholder="Поиск:" />
+      <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+        <input type="text" placeholder="Поиск:" />
+      </form>
       <a class="main-header-tab" href="#">Закладки: 0</a>
       <a class="main-header-basket basket-full" href="#">Корзина: 10</a>
-      <a class="button" href="#">Оформить Заказ</a>
+      <a class="button-place" href="#">Оформить Заказ</a>
     </div>
     <div class="main-header-middle">
       <h1>
@@ -44,7 +50,7 @@
     </div>
   </header>
 
-  <main class="container">
+  <main class="container inner-page">
     <ul class="breadcrumbs">
       <li>
         <a href="index.html"><span>Главная</span></a>
@@ -58,7 +64,9 @@
     <section class="filters">
       <h3>Фильтр:</h3>
       <form class="filter" action="https://echo.htmlacademy.ru" method="GET">
-        <p>Цена:</p>
+        <fieldset>
+          <legend>Цена:</legend>
+        </fieldset>
 
         <!-- FOR LATER -->
 
@@ -135,8 +143,8 @@
         <li class="catalog-item focus">
           <h3><a href="catalog-item.html"> Перфоратор BOSCH BFG 2000 </a></h3>
           <p class="catalog-item-actions">
-            <a class="button" href="#">Купить</a>
-            <a class="button" href="#">В закладки</a>
+            <a class="button-buy" href="#">Купить</a>
+            <a class="button-tab" href="#">В закладки</a>
           </p>
           <p class="catalog-item-price"><b class="new-price">12500 Р.</b></p>
         </li>
