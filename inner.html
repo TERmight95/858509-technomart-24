@@ -74,11 +74,21 @@
           <h3>Фильтр:</h3>
           <form class="filter" action="https://echo.htmlacademy.ru" method="GET">
             <fieldset>
-              <legend>Цена:</legend>
+              <legend class="filter-price">Цена:</legend>
+              <div class="range-filter">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="toggle toggle-min"></div>
+                  <div class="toggle toggle-max"></div>
+                </div>
+                <div class="price-controls">
+                  <input name="min-price" type="text" value="0">
+                  <input name="max-price" type="text" value="30000">
+                </div>
+              </div>
             </fieldset>
-
-            <!-- FOR LATER -->
-
             <fieldset>
               <legend>Производители:</legend>
               <ul>
@@ -125,6 +135,15 @@
         <section class="catalog">
           <div class="assortment">
             <h3>Сортировка:</h3>
+            <div class="assortment-type">
+              <a href="#">По цене</a>
+              <a href="#">По типу</a>
+              <a href="#">По функионалу</a>
+            </div>
+            <div class="assortment-direction">
+              <a href="#"><span class="ascending"></span></a>
+              <a href="#"><span class="descending" ></span></a>
+            </div>
           </div>
           <ul class="catalog-list">
             <li class="catalog-item">
@@ -159,7 +178,7 @@
                 <p class="new-price">25500 Р.</p>
               </div>
             </li>
-            <li class="catalog-item">
+            <li class="catalog-item catalog-item-new">
               <div class="flag flag-new">новинка</div>
               <div class="actions">
                   <a href="#" class="buy">Купить</a>
@@ -192,7 +211,7 @@
                 <p class="new-price">15500 Р.</p>
               </div>
             </li>
-            <li class="catalog-item">
+            <li class="catalog-item catalog-item-new">
               <div class="flag flag-new">новинка</div>
               <div class="actions">
                   <a href="#" class="buy">Купить</a>
@@ -225,7 +244,7 @@
                 <p class="new-price">12500 Р.</p>
               </div>
             </li>
-            <li class="catalog-item">
+            <li class="catalog-item catalog-item-new">
               <div class="flag flag-new">новинка</div>
               <div class="actions">
                   <a href="#" class="buy">Купить</a>
@@ -306,7 +325,7 @@
       <div class="container">
         <a href="#" class="main-footer-logo"><img src="img/logo-footer.jpg" alt="Логотип"></a>
         <nav class="main-footer-navigation">
-          <ul class="site-navigation">
+          <ul class="main-footer-site-navigation">
             <li><a href="about.html">Компания</a></li>
             <li><a href="news.html">Новости</a></li>
             <li><a href="inner.html">Каталог</a></li>
