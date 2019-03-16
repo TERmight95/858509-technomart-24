@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
 
-  font-family: 'Cuprum', sans-serif;
+  font-family: 'Cuprum', 'Arial', sans-serif;
   
   background-color: #ffffff;
 }
@@ -101,52 +101,52 @@ p {
   height: 42px;
 }
 
-/* ???????????? */
-
-.main-header-logo img {
-  display: none;
-}
-
 .main-header-top .main-header-logo {
-  display: block;
   width: 220px; 
   height: 47px;
   margin: 0;
   padding: 0;
+  padding: 13px;
 
-  background-image: url("../img/logo-header.jpg");
+  background-color: #ee3643;
+  box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
 }
 
-.main-header-logo:hover,
-.main-header-logo:focus {
-    background-image: url("../img/logo-hover.jpg");   
+.main-header-top .main-header-logo:hover,
+.main-header-top .main-header-logo:focus,
+.main-footer-top .main-footer-logo:hover,
+.main-footer-top .main-footer-logo:focus { 
+  background-color: #ca2c37;
     
 }
 
-.main-header-logo:active {
-  background-image: url("../img/logo-active.jpg");
+.main-header-top .main-header-logo:active,
+.main-footer-top .main-footer-logo:active {
+  background-color: #ba2732;
+
 }
 
 .main-header-top a {
-  box-sizing: border-box;
-  padding: 13px;
   display: block;
+  padding: 13px;
   width: 150px;
 
   font-size: 17px;
   line-height: 18px;
   color: #ffffff;
   text-align: center;
+
+  box-sizing: border-box;
 }
 
- .search-form input {
+.search-form input {
+  display: block;
   position: relative;
 
   box-sizing: border-box;
   width: 270px;
 
-  display: block;
-  padding-right: 0;
+  padding-right: 20px;
   padding-top: 13px;
   padding-bottom: 11px;
   padding-left: 49px;
@@ -168,7 +168,6 @@ p {
   background-repeat: no-repeat;
   background-position: 17px 12px;
   z-index: 2;
-  transition: 0.5s;
 }
 
 .search-form input::placeholder {
@@ -200,7 +199,6 @@ p {
 }
 
 .icon-search:hover::before {
-  transition: 0.5s;
   opacity: 1;
 }
 
@@ -578,8 +576,6 @@ p {
 
   margin: 0;
   padding: 0;
-  /* padding-left: 22px;
-  padding-right: 22px; */
   
   list-style: none;
 }
@@ -589,7 +585,7 @@ p {
 }
 
 .site-navigation a {
-  display: inline-block;
+  display: block;
 
   max-width: 135px;
   margin: 0;
@@ -642,13 +638,19 @@ p {
 }
 
 .site-menu-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   position: relative;
-  /* height: 123px; */
   margin-bottom: 20px;
   padding-left: 23px;
   padding-bottom: 22px;
   padding-top: 21px;
-  width: 277px;
+  padding-right: 120px;
+  width: 300px;
+
+  box-sizing: border-box;
 }
 
 
@@ -869,7 +871,7 @@ p {
   margin-bottom: 20px;
   padding: 0;
 
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'PT Sans', 'Arial', sans-serif;
 
   list-style: none;
 }
@@ -937,7 +939,7 @@ p {
   padding: 0;
   width: 400px;
 
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'PT Sans', 'Arial', sans-serif;
 }
 
 .services-slider {
@@ -1040,7 +1042,7 @@ p {
   position: absolute;
 
   top: 1px;
-  left: 230px;
+  left: 239px;
 
   width: 389px;
   height: 283px;
@@ -1063,8 +1065,8 @@ p {
 
   position: absolute;
 
-  top: 0;
-  left: 160px;
+  top: -1px;
+  left: 165px;
 
   width: 465px;
   height: 285px;
@@ -1116,7 +1118,7 @@ p {
   margin-bottom: 24px;
   padding: 0;
 
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'PT Sans', 'Arial', sans-serif;
 }
 
 .about-company ul {
@@ -1138,7 +1140,8 @@ p {
   margin-top: -2px;
   padding: 0;
   padding-left: 36px;
-  padding-bottom: 22px;
+  padding-right: 150px;
+  margin-bottom: 22px;
 
   color: #000000;
   font-size: 18px;
@@ -1159,37 +1162,38 @@ p {
 
 .contacts {
   width: 300px;
- }
+}
 
 .contacts h2 {
    margin: 0;
-   margin-bottom: 27px;
+   margin-bottom: 26px;
    padding: 0;
- }
+}
 
 .contacts p {
    display: block;
    width: 180px;
-   margin-bottom: 29px;
+   margin-bottom: 30px;
 
-   font-family: 'PT Sans', sans-serif;
- }
+   font-family: 'PT Sans', 'Arial', sans-serif;
+}
 
 .contacts img {
   margin-bottom: 36px;
+  cursor: pointer;
 }
 
 .inner-page  {
   padding: 0;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'PT Sans', 'Arial', sans-serif;
 }
 
 .inner-page h2 {
-  font-family: 'Cuprum', sans-serif;
+  font-family: 'Cuprum', 'Arial', sans-serif;
 }
 
 .page-title {
-  font-family: 'Cuprum', sans-serif;
+  font-family: 'Cuprum', 'Arial', sans-serif;
   background-color: #f2f6f8;
 }
 
@@ -1397,6 +1401,7 @@ p {
   text-align: center;
   font-size: 17px;
   line-height: 18px;
+  vertical-align: top;
 
   background-color: #f7f3ec;
   border: none;
@@ -1677,7 +1682,7 @@ p {
   top: 3px;
   left: 1px;
   
-  width: 218px;
+  width: 216px;
   height: 88px;
   padding: 40px 0;
   
@@ -1698,7 +1703,7 @@ p {
   color: white;
   font-size: 14px;
   font-weight: normal;
-  font-family: "Cuprum", sans-serif;
+  font-family: 'Cuprum', 'Arial', sans-serif;
   line-height: 18px;
   text-decoration: none;
   text-transform: uppercase;
@@ -1946,9 +1951,16 @@ p {
 
 .main-footer-logo {
   display: block;
+
   margin-bottom: 19px;
+  padding-left: 41px;
+  padding-top: 20px;
   width: 220px;
   height: 68px;
+
+  background-color: #ee3643;
+  box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
+  box-sizing: border-box;
 }
 
 .main-footer-navigation {
@@ -1977,7 +1989,7 @@ p {
 }
 
 .main-footer-site-navigation a {
-  display: inline-block;
+  display: block;
 
   margin: 0;
   padding: 19px 0;
@@ -2116,6 +2128,46 @@ p {
 
 /* MODALS */
 
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
 .modal {
   position: fixed;
   background-color: #ffffff;
@@ -2169,7 +2221,7 @@ p {
 .modal-feedback textarea {
   padding: 8px 13px;
 
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'PT Sans', 'Arial', sans-serif;
   color: #b5b5b5;
   font-size: 13px;
   line-height: 18px;
@@ -2228,6 +2280,8 @@ p {
   border: 0;
 
   cursor: pointer;
+  outline: none;
+  z-index: 3;
 }
 
 .modal-close::before,
@@ -2268,7 +2322,18 @@ p {
 }
 
 .modal-map p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
   margin: 0;
+}
+
+.modal-map iframe {
+  position: relative;
+  z-index: 2;
+
+  border: none;
 }
 
 .modal-in-basket {
@@ -2324,4 +2389,14 @@ p {
   color: #ffffff;
   background-color: #939390;
   outline: none;
+}
+
+.modal-show {
+  display: block;
+
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }
