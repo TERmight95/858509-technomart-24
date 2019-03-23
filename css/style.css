@@ -519,6 +519,8 @@ img {
 	width: 100%;
 
 	background-color: #32425c;
+
+	border-bottom: 5px solid #293449;
 }
 
 .site-navigation {
@@ -527,35 +529,29 @@ img {
 	justify-content: flex-start;
 
 	margin: 0;
-	padding: 0;
+	padding: 0 19px;
 
 	list-style: none;
 }
 
 .site-navigation li {
+	flex-grow: 1;
+
 	overflow: hidden;
 }
 
 .site-navigation a {
+	position: relative;
 	display: block;
 
-	max-width: 135px;
 	margin: 0;
-	padding: 19px 31px;
+	padding: 19px 10px;
 
 	color: #ffffff;
 	font-size: 17px;
 	line-height: 17px;
 	text-align: center;
-	border-bottom: 5px solid #293449;
-}
-
-.site-navigation li:first-child a {
-	padding-left: 50px;
-}
-
-.site-navigation li:last-child a {
-	padding-right: 50px;
+	white-space: nowrap;
 }
 
 .site-navigation a:hover,
@@ -750,6 +746,11 @@ img {
 	background-color: #ee3643;
 }
 
+#product-1:focus ~ .menu-slider-controls label[for="product-1"],
+#product-2:focus ~ .menu-slider-controls label[for="product-2"] {
+	outline: auto;
+}
+
 #product-1:checked ~ .menu-slider-list #menu-slide1,
 #product-2:checked ~ .menu-slider-list #menu-slide2 {
 	display: block;
@@ -912,12 +913,11 @@ img {
 }
 
 .services-slider-controls {
-	position: relative;
-	margin-right: 80px;
-
-	width: 240px;
 	display: flex;
 	flex-direction: column;
+	position: relative;
+
+	width: 240px;
 }
 
 .services-slider-controls::after {
@@ -957,13 +957,19 @@ img {
 	box-shadow: none;
 }
 
-.services-slider-list {
+.services-slider-controls label:focus .services-slider-list {
 	margin: 0;
 	padding: 0;
 
 	min-height: 284px;
 
 	list-style: none;
+}
+
+.services-slider-list {
+	padding: 0;
+	padding-left: 80px;
+	margin: 0;
 }
 
 .services-slider-item {
@@ -1030,6 +1036,13 @@ img {
 
 	background-color: #ffffff;
 	box-shadow: none;
+	border: none;
+}
+
+#service-1:focus ~ .services-slider-controls label[for="service-1"],
+#service-2:focus ~ .services-slider-controls label[for="service-2"],
+#service-3:focus ~ .services-slider-controls label[for="service-3"] {
+	outline: auto;
 }
 
 #service-1:checked ~ .services-slider-list #services-slide1,
@@ -1552,7 +1565,8 @@ img {
 	border-bottom: 1px dotted #ee3643;
 }
 
-.assortment-type a:hover {
+.assortment-type a:hover,
+.assortment-type .active {
 	color: rgba(0, 0, 0, 1);
 	border-bottom: 1px solid #ee3643;
 }
@@ -1563,49 +1577,26 @@ img {
 }
 
 .assortment-direction {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 	margin: 0;
 	padding: 0;
+	padding-right: 8px;
 
 	position: relative;
 	width: 70px;
+
+	box-sizing: border-box;
 }
 
-.ascending {
-	position: absolute;
-	bottom: 14px;
-	left: 9px;
-
-	border-style: solid;
-	border-width: 0 5.5px 10px 5.5px;
-	border-color: transparent transparent #c5c5c5 transparent;
+.assortment-direction a:hover svg {
+	fill: #000000;
 }
 
-.descending {
-	position: absolute;
-	top: 14px;
-	right: 17px;
-
-	border-style: solid;
-	border-width: 10px 5.5px 0 5.5px;
-	border-color: #c5c5c5 transparent transparent transparent;
-}
-
-.ascending:hover,
-.ascending:focus {
-	border-color: transparent transparent #000000 transparent;
-}
-
-.descending:hover,
-.descending:focus {
-	border-color: #000000 transparent transparent transparent;
-}
-
-.ascending:active {
-	border-color: transparent transparent #ee3643 transparent;
-}
-
-.descending:active {
-	border-color: #ee3643 transparent transparent transparent;
+.assortment-direction a:active svg,
+.assortment-direction .active svg {
+	fill: #ee3643;
 }
 
 .catalog-list {
